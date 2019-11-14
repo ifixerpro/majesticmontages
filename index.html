@@ -226,8 +226,7 @@
   const scriptURL = 'https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec'
   const form = document.forms['submit-to-google-sheet']
   ...
-</script>
-			
+</script>	
 		<div id="colorlib-contact">
 			<div class="container">
 				<div class="row">
@@ -251,7 +250,8 @@
 					</div>
 					<div class="col-md-8 col-md-pull-4 animate-box">
 						<h2>Get In Touch</h2>
-						<form action="https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec" method="doGet">
+						
+						<form action="https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec">
 							<div class="row form-group">
 								<div class="col-md-6">
 									<!-- <label for="fname">First Name</label> -->
@@ -266,7 +266,7 @@
 							<div class="row form-group">
 								<div class="col-md-12">
 									<!-- <label for="email">Email</label> -->
-									<input type="text" id="email" class="form-control" placeholder="Email Sddress">
+									<input name="email" type="email" class="form-control" placeholder="Email Sddress" required>
 								</div>
 							</div>
 
