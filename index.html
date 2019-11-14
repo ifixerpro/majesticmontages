@@ -354,7 +354,6 @@
 					<div class="col-md-3 text-center animate-box">
 						<div class="pricing">
 							<h2 class="pricing-heading">Bar/Bat Mitzvah Montage</h2>
-							<img src="https://media.istockphoto.com/vectors/bar-mitzvah-boy-vector-id165965925?k=6&m=165965925&s=612x612&w=0&h=65YyltBmjKbBodnhpwgxgCjpjq4dwDgVLuzGQzqP2I0=" width=40" height="40"></div>
 							<p>This is a montage for your son or daughter's Bar/Bat Mitzvah.</p>
 							<p><a href="#" class="btn btn-primary">Select Plan</a></p>
 						</div>
@@ -442,6 +441,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
 	
+	<form name="submit-to-google-sheet">
+  <input name="email" type="email" placeholder="Email" required>
+  <button type="submit">Send</button>
+</form>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -463,23 +479,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-				
-<form name="submit-to-google-sheet">
-  <input name="email" type="email" placeholder="Email" required>
-  <button type="submit">Send</button>
-</form>
-
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec'
-  const form = document.forms['submit-to-google-sheet']
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
 
 	</body>
 </html>
