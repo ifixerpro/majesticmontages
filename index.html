@@ -253,21 +253,21 @@
 								</div>
 								<div class="col-md-6">
 									<!-- <label for="lname">Last Name</label> -->
-									<input type="text" id="lname" class="form-control" placeholder="Last Name">
+									<input type="text" name="lname" class="form-control" id="lname" placeholder="Last Name">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<div class="col-md-12">
 									<!-- <label for="email">Email</label> -->
-									<input type="text" id="email" class="form-control" placeholder="Email Address">
+									<input type="text" name="email" class="form-control" id="email" placeholder="Email Adress">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<div class="col-md-12">
 									<!-- <label for="subject">Subject</label> -->
-									<input type="text" id="subject" class="form-control" placeholder="Subject Of This Message">
+									<input type="text" name="subject" class="form-control" id="subject" placeholder="Subject Of This Message">
 								</div>
 							</div>
 
@@ -279,8 +279,21 @@
 							</div>
 							<div class="form-group">
 								<input type="submit" value="Send Message" class="btn btn-primary">
+								<button type="submit">Send</button>
 							</div>
 						</form>
+<div id="output"></div><!-- where the confirmation message goes -->
+ 
+<script>
+   function formSubmitted(status) {
+        document.getElementById('genericForm').style.display = 'none'; //matches your form name or whatever you want to disappear post-submission
+        document.getElementById('output').innerHTML = status; //displays in item with the 'output' id
+    }
+</script>
+						
+						
+						
+						
 						<script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec'
   const form = document.forms['submit-to-google-sheet']
