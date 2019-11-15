@@ -243,9 +243,44 @@
 							</div>
 						</div>
 					</div>
+					
+					<script>
+						function validate(){
+							
+							var name=document.getElementById('fname');
+							var name=document.getElementById('lname');
+							var name=document.getElementById('email');
+							var name=document.getElementById('subject');
+							var name=document.getElementById('message');
+							
+							if(fname.value == ''){
+								alert('Please Enter Your First Name');
+								return false;
+							}
+							if(lname.value == ''){
+								alert('Please Enter Your Last Name');
+								return false;
+							}
+							if(email.value == ''){
+								alert('Please Enter Your Email');
+								return false;
+							}
+							if(subject.value == ''){
+								alert('Please Enter Your Subject');
+								return false;
+							}
+							if(message.value == ''){
+								alert('Please Enter Your Message');
+								return false;
+							}
+							
+							
+						}
+						</script>
+					
 					<div class="col-md-8 col-md-pull-4 animate-box">
 						<h2>Get In Touch</h2>
-						<form action="/action_page.php" target="#" method="GET">
+						<form method="get" onsubmit="return validate()" action="form.php">
 							<div class="row form-group">
 								<div class="col-md-6">
 									<!-- <label for="fname">First Name</label> -->
@@ -278,7 +313,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<input type="submit" value="Submit" class="btn btn-primary">
+								<input type="submit" name="submit" id="submit" value="submit here" class="btn btn-primary" />
 							</div>
 						</form>
 <div id="output"></div><!-- where the confirmation message goes -->
