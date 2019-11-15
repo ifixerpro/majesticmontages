@@ -278,101 +278,10 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<input type="submit" value="Send Message" class="btn btn-primary">
-								<button type="submit">Send</button>
+								<input type="submit" value="Send Now" class="btn btn-primary">
 							</div>
 						</form>
 <div id="output"></div><!-- where the confirmation message goes -->
- 
-<script>
-   function formSubmitted(status) {
-        document.getElementById('genericForm').style.display = 'none'; //matches your form name or whatever you want to disappear post-submission
-        document.getElementById('output').innerHTML = status; //displays in item with the 'output' id
-    }
-</script>
-						
-						
-						
-						
-						<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec'
-  const form = document.forms['submit-to-google-sheet']
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
-					</div>
-				</div>
-			</div>
-		</div>
-			
-			
-			<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
-<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
-
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec'
-  const form = document.forms['submit-to-google-sheet']
-  ...
-</script>
-	
-	<form name="submit-to-google-sheet">
-  <input name="email" type="email" placeholder="Email" required>
-  <input name="firstName" type="text" placeholder="First Name">
-  <input name="lastName" type="text" placeholder="Last Name">
-  <button type="submit">Send</button>
-</form>
-
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec'
-  const form = document.forms['submit-to-google-sheet']
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
-			
-<h2>Contact US</h2>
- 
-<form id="genericForm">
- 
-<div class="form-group">
- 
-<div>
-    <label for="distinguishedName">A Distinguished Name</label>
-    <input type="text" name="distinguishedName" class="form-control" id="distinguishedName" placeholder="A Fancy Name">
-</div>
- 
- 
-<div>
-    <label for="moreDetails">Details</label>    
-    <input type="text" name="moreDetails" id="moreDetails" placeholder="Additional Secrets">
-</div>
- 
-</div>
- 
- <input type="submit" onclick="this.value='Magic ...'; google.script.run.withSuccessHandler(formSubmitted) .writeForm(this.parentNode); return false;">
-  
-</form>
- 
- 
- 
-<div id="output"></div><!-- where the confirmation message goes -->
- 
-<script>
-   function formSubmitted(status) {
-        document.getElementById('genericForm').style.display = 'none'; //matches your form name or whatever you want to disappear post-submission
-        document.getElementById('output').innerHTML = status; //displays in item with the 'output' id
-    }
-</script>
 			
 			
 		<footer id="colorlib-footer">
