@@ -6,7 +6,7 @@ $email = $_GET['email'];
 $subject = $_GET['subject'];
 $message = $_GET['message'];
 
-echo "Welcome Mr. ".$lname;
+echo "Welcome ".$fname;
 echo "<br/>";
 
 ?>
