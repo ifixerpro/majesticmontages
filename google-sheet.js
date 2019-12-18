@@ -23,11 +23,13 @@ $("#foo").submit(function(event){
     $inputs.prop("disabled", true);
 
     // Fire off the request to /form.php
-    request = $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec",
-        type: "post",
-        data: serializedData
-    });
+var payload = {
+url: "YOUR_FORM_URL_HERE",
+method: "POST",
+dataType: 'jsonp',
+data: serializedData
+};
+request = jQuery.ajax(payload)
 
     // Callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR){
