@@ -273,71 +273,26 @@
 					
 					<div class="col-md-8 col-md-pull-4 animate-box">
 						<h2>Get In Touch</h2>
-						<!--<form method="GET" onsubmit="return validate()" action="https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec">
-							 <script>
-var $form = $('form#test-form'),
-url = 'https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec'
-
-$('#submit-form').on('click', function(e) {
-  e.preventDefault();
-  var jqxhr = $.ajax({
-    url: url,
-    method: "GET",
-    dataType: "json",
-    data: $form.serializeObject()
-  }).success(
-    // do something
-  );
-})
-
-</script> -->
-						
-						
-
-	<form id="test-form">
-  
-  <div>
-    <label>Field 1</label>
-    <input type="text" name="form_field_1" placeholder="Field 1"/>
-  </div>
-
-  <div>
-    <label>Field 2</label>
-    <input type="text" name="form_field_2" placeholder="Field 2"/>
-  </div>
-  
-  <div>
-    <label>Field 3</label>
-    <input type="text" name="form_field_3" placeholder="Field 3"/>
-  </div>
-  
-  <div>
-    <label>Field 4</label>
-    <input type="text" name="form_field_4" placeholder="Field 4"/>
-  </div>
-
-  <div>
-    <button type="submit"id="submit-form">Submit</button>
-  </div>
-
+						<form method="GET" onsubmit="return validate()" action="https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec">
+							 
+							
+							
+<form name="submit-to-google-sheet">
+  <input name="email" type="email" placeholder="Email" required>
+  <button type="submit">Send</button>
 </form>
-						
-<script>
-	var $form = $('form#test-form'),
-    url = 'https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec'
 
-$('#submit-form').on('click', function(e) {
-  e.preventDefault();
-  var jqxhr = $.ajax({
-    url: url,
-    method: "GET",
-    dataType: "json",
-    data: $form.serializeObject()
-  }).success(
-    // do something
-  );
-})
-						</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 						
 						
 		
