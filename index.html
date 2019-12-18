@@ -278,9 +278,11 @@
 							
 							
 <form name="submit-to-google-sheet">
-  <input name="firstName" type="text" placeholder="First Name">
-  <input name="lastName" type="text" placeholder="Last Name">
+  <input name="firstName" type="text" placeholder="First Name" required>
+  <input name="lastName" type="text" placeholder="Last Name" required>
 <input name="email" type="email" placeholder="Email" required>
+	<input name="subject" type="subject" placeholder="Email" required>
+	<input name="email" type="email" placeholder="Email" required>
   <button type="submit">Send</button>
 </form>
 
@@ -300,7 +302,7 @@
 		
 		<div class="row form-group">
 								<div class="col-md-6">
-									
+									<form name="submit-to-google-sheet">
 									<label for="fname">First Name</label>
 									<input type="text" name="fname" class="form-control" id="fname" placeholder="First Name">
 								</div>
@@ -336,6 +338,18 @@
 							</div>
 						</form>
 					</section>
+					
+					<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 
 				
 <div id="output"></div><!-- where the confirmation message goes -->
