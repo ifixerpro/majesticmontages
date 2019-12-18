@@ -296,41 +296,28 @@ $('#submit-form').on('click', function(e) {
 						
 
 	
-						
-						<form id="myForm" action="https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec">
-						First Name:<br>
-    <input type="text" name="firstname" style="width:200px"><br>
-    Last Name:<br>
-    <input type="text" name="lastname" style="width:200px"><br>
-    <br>
-    <input type="submit" id="mySubmit" value="Submit">
-</form>
+	<form id='foo'>
+      <p>
+        <label>Name</label>
+        <input id='name' name='name' type='text'>
+      </p><p>
+        <label>Email Address</label>
+        <input id='email' name='email' type='email'>
+      </p><p>
+        <label>Phone Number</label>
+        <input id='phone' name='phone' type='tel'>
+      </p><p>
+        <label>Message</label>
+        <textarea id='message' name='message' rows='5'></textarea>
+      </p>
+        <div id='success'></div>
+        <button type='submit'>Send</button>
+    </form>
 
-<p><span id="myConf">This is where the confirmation message will appear after submission.</span></p>	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script src='google-sheet.js'></script>
 						
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-    // References:
-    var $form = $('#myForm');
-    var $conf = $('#myConf');
-    var $subm = $('#mySubmit');
-    var $impt = $form.find(':input').not(':button, :submit, :reset, :hidden');
- // Submit function:
-    $form.submit(function(){
-        $.post($(this).attr('action'), $(this).serialize(), function(response){
-      // On success, clear all inputs;
-            $impt.val('').attr('value','').removeAttr('checked').removeAttr('selected');
-   // Write a confirmation message:
-            $conf.html("Submitted!");
-   // Disable the submit button:
-            $subm.prop('disabled', true);
-        },'json');
-        return false;
-    });
-});
-</script>
 						
 		
 		<div class="row form-group">
