@@ -295,28 +295,33 @@ $('#submit-form').on('click', function(e) {
 						https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec
 						
 
-	
-	<form id='foo'>
-      <p>
-        <label>Name</label>
-        <input id='name' name='name' type='text'>
-      </p><p>
-        <label>Email Address</label>
-        <input id='email' name='email' type='email'>
-      </p><p>
-        <label>Phone Number</label>
-        <input id='phone' name='phone' type='tel'>
-      </p><p>
-        <label>Message</label>
-        <textarea id='message' name='message' rows='5'></textarea>
-      </p>
-        <div id='success'></div>
-        <button type='submit'>Send</button>
-    </form>
+	<form id="test-form">
+  
+  <div>
+    <label>Field 1</label>
+    <input type="text" name="form_field_1" placeholder="Field 1"/>
+  </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <!-- Custom Theme JavaScript -->
-  <script src='/google-sheet.js'></script>
+  <div>
+    <label>Field 2</label>
+    <input type="text" name="form_field_2" placeholder="Field 2"/>
+  </div>
+  
+  <div>
+    <label>Field 3</label>
+    <input type="text" name="form_field_3" placeholder="Field 3"/>
+  </div>
+  
+  <div>
+    <label>Field 4</label>
+    <input type="text" name="form_field_4" placeholder="Field 4"/>
+  </div>
+
+  <div>
+    <button type="submit"id="submit-form">Submit</button>
+  </div>
+
+</form>
 						
 						
 		
