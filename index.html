@@ -273,8 +273,8 @@
 					
 					<div class="col-md-8 col-md-pull-4 animate-box">
 						<h2>Get In Touch</h2>
-						<form method="GET" onsubmit="return validate()" action="https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec">
-							<!-- <script>
+						<!--<form method="GET" onsubmit="return validate()" action="https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec">
+							 <script>
 var $form = $('form#test-form'),
 url = 'https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec'
 
@@ -291,8 +291,48 @@ $('#submit-form').on('click', function(e) {
 })
 
 </script> -->
-							<div class="row form-group">
+						
+						https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec
+						
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    // References:
+    var $form = $('#myForm');
+    var $conf = $('#myConf');
+    var $subm = $('#mySubmit');
+    var $impt = $form.find(':input').not(':button, :submit, :reset, :hidden');
+ // Submit function:
+    $form.submit(function(){
+        $.post($(this).attr('action'), $(this).serialize(), function(response){
+      // On success, clear all inputs;
+            $impt.val('').attr('value','').removeAttr('checked').removeAttr('selected');
+   // Write a confirmation message:
+            $conf.html("Submitted!");
+   // Disable the submit button:
+            $subm.prop('disabled', true);
+        },'json');
+        return false;
+    });
+});
+</script>
+	
+						
+						<form id="myForm" action="https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec">
+						First Name:<br>
+    <input type="text" name="firstname" style="width:200px"><br>
+    Last Name:<br>
+    <input type="text" name="lastname" style="width:200px"><br>
+    <br>
+    <input type="submit" id="mySubmit" value="Submit">
+</form>
+
+<p><span id="myConf">This is where the confirmation message will appear after submission.</span></p>	
+		
+		<div class="row form-group">
 								<div class="col-md-6">
+									
 									<label for="fname">First Name</label>
 									<input type="text" name="fname" class="form-control" id="fname" placeholder="First Name">
 								</div>
