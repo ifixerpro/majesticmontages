@@ -237,7 +237,7 @@
 					</div>
 
 					
-					<script>
+					<!-- <script>
 						function validate(){
 							
 							var name=document.getElementById('fname');
@@ -269,7 +269,7 @@
 							
 							
 						}
-						</script>
+						</script> -->
 					
 					<div class="col-md-8 col-md-pull-4 animate-box">
 						<h2>Get In Touch</h2>
@@ -278,7 +278,9 @@
 							
 							
 <form name="submit-to-google-sheet">
-  <input name="email" type="email" placeholder="Email" required>
+  <input name="firstName" type="text" placeholder="First Name">
+  <input name="lastName" type="text" placeholder="Last Name">
+<input name="email" type="email" placeholder="Email" required>
   <button type="submit">Send</button>
 </form>
 
@@ -334,62 +336,9 @@
 							</div>
 						</form>
 					</section>
-					
-<script>
-var $form = $('form#test-form'),
-url = 'https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec'
-
-$('#submit-form').on('click', function(e) {
-  e.preventDefault();
-  var jqxhr = $.ajax({
-    url: url,
-    method: "GET",
-    dataType: "json",
-    data: $form.serializeObject()
-  }).success(
-    // do something
-  );
-})
-
-</script>
-	
-<form id="contact-form">
-  
-  <div>
-    <label>First Name</label>
-    <input type="text" name="form_field_1" placeholder=""/>
-  </div>
-
-  <div>
-    <label>Last Name</label>
-    <input type="text" name="for_field_2" placeholder=""/>
-  </div>
-  
-  <div>
-    <label>Email</label>
-    <input type="text" name="form_field_3" placeholder=""/>
-  </div>
-  
-  <div>
-    <label>Subject</label>
-    <input type="text" name="form_field_4" placeholder=""/>
-  </div>
-					
-<label>Message</label>
-    <input type="text" name="form_field_5" placeholder=""/>
-  </div>
-
-  <div>
-    <button type="submit"id="submit-form">Submit</button>
-  </div>
-
-</form>
 
 				
-				
-				
-				
-<div id="output">Thank You</div><!-- where the confirmation message goes -->
+<div id="output"></div><!-- where the confirmation message goes -->
 			
 			
 		
