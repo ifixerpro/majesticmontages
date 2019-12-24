@@ -276,23 +276,25 @@
 						<form method="GET" onsubmit="return validate()" action="https://script.google.com/macros/s/AKfycbyPHINZwC3KpVXTjV3mCxiTM1vbj66uhIupp6AM5bSH8qlsv1qP/exec">
 							 
 							
-						
+<div class="row form-group">						
 <form name="submit-to-google-sheet">
   
-	<label for="firstName">First Name</label>
-	<input class="col-md-6" name="firstName" type="text" placeholder="First Name" required>
+	class="col-md-6"
+	<input class="form-control" name="firstName" type="text" placeholder="First Name" required>
 	
-	<label for="lastName">Last Name</label>
-	<input class="col-md-6" name="lastName" type="text" placeholder="Last Name" required>
+	class="col-md-6"
+	<input class="form-control" name="lastName" type="text" placeholder="Last Name" required>
 	
-	<label for="email">Email</label>
-	<input class="col-md-12" name="email" type="email" placeholder="Email" required>
+	class="col-md-12"
+	<input class="form-control" name="email" type="email" placeholder="Email" required>
 	
-	<label for="subject">Subject</label>
-	<input class="col-md-12" name="subject" type="subject" placeholder="subject" required>
+	class="col-md-12"
+	<input class="form-control" name="subject" type="subject" placeholder="subject" required>
+
+	class="col-md-12"
+	<input class="form-control" name="message" type="message" placeholder="message" required>
 	
-	<label for="message">Message</label>
-	<input class="col-md-12" name="message" type="message" placeholder="message" required>
+	<textarea name="message" type="message" cols="30" rows="10" class="form-control" placeholder="Say Something To Us"></textarea>
   
 	<button class="btn btn-primary" type="submit">Send</button>
 </form>
